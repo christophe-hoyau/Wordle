@@ -1,0 +1,43 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Jouer
+{% endblock %}
+{% block body %}
+<section id="banner">
+    <div class="inner">
+        
+        <ul class="actions special">
+            <form style="color:#ffffff" action="#" method="post" >
+                <p style="color:#ffffff" >Veuillez choisir le niveau de difficulté :  </p> <br /><br /> 
+                <p style="color:#ffffff" > Le mot aura une longueur comprise entre 1er choix et 2e choix lettre  </p> <br /><br /> 
+
+
+                5 <input type="radio" value="1" name="mycheckbox">
+                6 <input type="radio" value="2" name="mycheckbox">
+                7 <input type="radio" value="3" name="mycheckbox"checked>
+                8 <input type="radio" value="4" name="mycheckbox">
+                9 <input type="radio" value="5" name="mycheckbox">
+                10 <input type="radio" value="6" name="mycheckbox">
+                11 <input type="radio" value="7" name="mycheckbox">
+                <br /><br />
+                5 <input type="radio" value="1" name="checkbox">
+                6 <input type="radio" value="2" name="checkbox">
+                7 <input type="radio" value="3" name="checkbox"checked>
+                8 <input type="radio" value="4" name="checkbox">
+                9 <input type="radio" value="5" name="checkbox">
+                10 <input type="radio" value="6" name="checkbox">
+                11 <input type="radio" value="7" name="checkbox">
+
+                <br /><br /><br /><br />
+                <button  class="bouton" type="submitt" value="submitt">Jouer</button>
+
+            </form>
+            
+        
+    </div>
+</section>
+{% endblock %}

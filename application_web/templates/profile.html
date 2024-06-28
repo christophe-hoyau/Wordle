@@ -1,0 +1,25 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Profil
+{% endblock %}
+
+{% block body %}
+<section id="banner" >
+    <div  class="inner">
+            <p style="color:#ffffff">Bienvenue sur ton profil, {{ user }}</p><br/><br/>
+            <p style="color:#ffffff">Vous pouvez accéder à l'historique de vos parties en appuyant sur ce bouton</p><br/><br/>
+            <ul class="actions special">
+                <li><a href="/historique" type="submit" class="bouton">Historique</a></li>
+            </ul>
+            <br/><br/><br/>
+            <p style="color:#ffffff">Vous pouvez vous déconnecter de votre profil en cliquant ici :</p><br/><br/>
+            <form  method="post" action="/profile">
+                <button class="bouton" name="logout" type="submit"> Logout </button>
+            </form>
+    </div>
+</section>
+{% endblock %}

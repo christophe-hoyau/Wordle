@@ -1,0 +1,46 @@
+
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Login
+{% endblock %}
+{% block body %}
+<section id="banner" >
+    <div  class="inner">
+        <p style="color:#ffffff" >Connectez vous pour jouer</p><br/><br/>
+        <p style="color:#ffffff" >Si vous n'avez pas de compte, vous pouvez vous connecter en mettant admin comme identifiant et mot de passe en appuyant ici : </p><br/><br/>
+        
+
+
+
+
+
+        <section id="signup">
+        <form method="POST" action="/login">
+            <ul>
+                <li>
+                         <p style="color:#ffffff">Username</p><br/>
+                         <input class="input is-large" type="text" name="username" placeholder="Username" autofocus="" autocomplete="off">
+                 </li>
+                 <br/><br/>
+                 <li> 
+                         <p style="color:#ffffff">Password</p><br/>
+                         <input class="input is-large" type="password" name="password" placeholder="Password" autocomplete="off">
+                 </li>
+            </ul> 
+            <button class="bouton">Login</button>
+            <br/><br/>
+        </form>
+           
+
+        </section>
+
+      
+            
+        
+    </div>
+</section>
+{% endblock %}

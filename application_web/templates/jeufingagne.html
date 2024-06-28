@@ -1,0 +1,44 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Jeu
+{% endblock %}
+{% block body %}
+<section id="banner">
+    <div class="inner">
+
+        <p style="color:#ffffff">Bravo tu as trouvé la bonne réponse</p> 
+        <br/>   
+
+        <table class="grille">
+           
+
+            
+            {% for i in range(0,7) %}
+            <tr class="grille-lig">
+                {% for j in range (0,n) %}
+                {% if mot[i][j] == 0%}
+                        <td style="color:#ffffff" class="case">{{rep1[i][j]}}</td>
+                    {% elif mot[i][j] == 2%}
+                        <td style="color:#ffffff" class="case_mal">{{rep1[i][j]}}</td>
+                    {% else %}
+                        <td style="color:#ffffff" class="case_bien">{{rep1[i][j]}}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            
+       
+        </table>
+        <br /><br />
+            <p style="color:#ffffff">Appuyer sur le bouton recommencer pour débuter une nouvelle partie:</p>
+            <br /><br />
+            <ul class="actions special">
+                <li><a href="/difficulte" type="submit" class="bouton">Recommencer</a></li>
+            </ul>
+    </div>
+</section>
+{% endblock %}

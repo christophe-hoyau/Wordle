@@ -1,0 +1,14 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    Choisir le mot
+{% endblock %}
+{% block title %}
+    Wordle
+{% endblock %}
+{% block body %}
+<form action = '/wordle' method = 'post'>
+    <input autocomplete = "on" autofocus name = "mot_cible" placeholder = "Mot à deviner" type = "text">
+    <input type = "submit" value = "Soumettre">
+</form>
+{% endblock %}

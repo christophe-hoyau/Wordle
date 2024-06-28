@@ -1,0 +1,46 @@
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Historique
+{% endblock %}
+{% block body %}
+
+<section id="banner" >
+    <div  class="inner">
+
+    {%   for i in range(longueur_tentative) %}
+        
+        {% set list_tent = tentative[i][1].split('//') %}
+        {% set long_list_tent = list_tent|length - 1  %}
+        <p style="color:#ffffff" class="mot_cible_historique">Le mot cible était : {{ tentative[i][0] }}</p><br/><br/>
+        {% for j in range(long_list_tent) %}
+            {% set list_val = list_tent[j].split('/') %}
+            {% set len_list_val = list_val[0]|length %}
+       
+            
+            <table style="color:#ffffff" class="grille">
+
+             <tr class="grille-lig">
+                    {% for l in range (len_list_val) %}
+                    {% if list_val[1][l] == '0'%}
+                        <td  style="color:#ffffff"class="case">{{list_val[0][l]}}</td>
+                    {% elif list_val[1][l] == '2'%}
+                        <td style="color:#ffffff" class="case_mal">{{list_val[0][l]}}</td>
+                    {% else %}
+                        <td  style="color:#ffffff" class="case_bien">{{list_val[0][l]}}
+                    {% endif %}
+                    {% endfor %}
+
+                </tr>
+                </table>
+
+        {% endfor %}
+        <br/><br/><br/>
+        
+    {% endfor %}
+</div>
+</section>
+{% endblock %}

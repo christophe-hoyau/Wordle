@@ -1,0 +1,48 @@
+
+{% extends "projet_layout.html" %}
+
+{% block titre %}
+    WORDLE
+{% endblock %}
+{% block title %}
+    Sign UP
+{% endblock %}
+{% block body %}
+<section id="banner" >
+    <div  class="inner">
+        <p style="color:#ffffff" >{{error}}</p><br/><br/>
+        <p style="color:#ffffff" >Inscrivez-vous pour jouer en créeant un identifiant et un mot de passe</p><br/><br/>
+        
+
+
+
+
+
+        <section id="signup">
+        <form method="POST" action="/signup">
+            <ul>
+                <li>
+                         <p style="color:#ffffff">Username</p><br/>
+                         <input class="input is-large" type="text" name="name" placeholder="Username" autofocus="" autocomplete="off">
+                 </li>
+                 <br/><br/>
+                 <li> 
+                         <p style="color:#ffffff">Password</p><br/>
+                         <input class="input is-large" type="password" name="password" placeholder="Password" autocomplete="off">
+                 </li>
+            </ul> 
+            <button class="bouton">signup</button>
+            <br/><br/>
+        </form>
+
+        </section>
+
+        <p style="color:#ffffff" >Si vous ne voulez pas créer de compte, vous pouvez vous connecter en mettant admin comme identifiant et mot de passe en appuyant ici : </p>
+        <ul class="actions special">
+            <li><a href="/login" type="submit" class="bouton">Login</a></li>
+        </ul>
+            
+        
+    </div>
+</section>
+{% endblock %}
